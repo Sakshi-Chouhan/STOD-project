@@ -18,7 +18,7 @@ STOD is a backend data management framework I built to securely ingest, clean, a
 
 📊 System Workflow
 
-'''text 
+```text 
 
   ┌────────────────────────┐
   │ START: Data Ingestion  │
