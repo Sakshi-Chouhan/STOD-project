@@ -1,6 +1,5 @@
 // Hardcoded Real-World Structural Personnel Matrix
 const talentDatabaseMatrix = [
-    // === 1. TOP 3 ORIGINAL ENTRIES (Tumhara Exact Data) ===
     {
         id: "STOD-01",
         name: "Sakshi Chouhan",
@@ -29,7 +28,6 @@ const talentDatabaseMatrix = [
         statusCode: "load-optimal"
     },
 
-    // === 2. TUMHARE BATCHMATES AUR CLASSROOM SUGGESTED NAMES ===
     {
         id: "STOD-04",
         name: "Shaili Nagar",
@@ -301,7 +299,6 @@ const talentDatabaseMatrix = [
         statusCode: "load-critical"
     },
 
-    // === 3. SECOND BATCH SUGGESTED NAMES (Om, Nitin, Priya, etc.) ===
     {
         id: "STOD-34",
         name: "Om Patel",
@@ -420,7 +417,6 @@ const talentDatabaseMatrix = [
         statusCode: "load-available"
     },
 
-    // === 4. GENERIC CLASSROOM STYLE RANDOM STUDENT NAMES ===
     {
         id: "STOD-47",
         name: "Rahul Mewada",
@@ -936,7 +932,6 @@ const talentDatabaseMatrix = [
     }
 ];
 
-// Dynamic DOM Processing Filtration Routine
 function filterTalentGrid(targetFilter, activeElement) {
     // Dynamic Class Toggling Matrix Control
     const buttons = document.querySelectorAll('.filter-btn');
@@ -949,7 +944,6 @@ function filterTalentGrid(targetFilter, activeElement) {
     let injectedHTMLBuffer = "";
     let matchingRecordCount = 0;
 
-    // Strict Evaluation Pipeline Loop
     talentDatabaseMatrix.forEach(profile => {
         if (targetFilter === 'all' || profile.role.toLowerCase() === targetFilter.toLowerCase()) {
             matchingRecordCount++;
@@ -967,13 +961,10 @@ function filterTalentGrid(targetFilter, activeElement) {
             `;
         }
     });
-
-    // Write Buffer Stream to DOM Node
     canvas.innerHTML = injectedHTMLBuffer;
     totalCountTracker.innerText = `${matchingRecordCount} Active`;
 }
 
-// Initial System Boot-Up Execution
 window.onload = function() {
     filterTalentGrid('all', document.querySelectorAll('.filter-btn')[0]);
 };
